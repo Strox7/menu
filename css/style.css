@@ -1,0 +1,293 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.scrollable-element {
+  scrollbar-color: red yellow;
+}
+
+:root {
+    --maincolor: #2196f3;
+    --altcolor: #1787e0;
+    --hslcolor:  hsl(209, 61%, 16%);
+    --main-duration: 0.3s;
+    --main-backgroundcolor: #ececec;
+    --main-padding: 100px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: white;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--maincolor);
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+body  {
+    font-family: 'Cairo', sans-serif;
+    background-color: var(--main-backgroundcolor);
+
+}
+
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (min-width: 768px) {
+    .container {
+      width: 750px;
+    }
+  }
+  /* Medium */
+  @media (min-width: 992px) {
+    .container {
+      width: 970px;
+    }
+  }
+  /* Large */
+  @media (min-width: 1200px) {
+    .container {
+      width: 1170px;
+    }
+  }
+
+
+
+
+header {
+    background-color: var(--maincolor);
+}
+
+header img {
+    width: 66px;
+    border-right: 1px solid white;
+    padding-right: 10px;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+header .container h2 {
+    display: flex;
+    align-items: center;
+}
+
+header .container h2 > a {
+    color: white;
+    margin-left: 13px;
+}
+
+header .container .links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+}
+
+.header .container .holder {
+
+}
+
+header .container .links li {
+
+}
+header .container .links li a {
+    height: 76px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 0px 20px;
+}
+
+header .container .nav-toggle {
+    display: none;
+}
+
+
+
+
+@media (max-width: 991px) {
+  header .container .links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    flex-direction: column;
+    transition: var(--main-duration);
+    height: 0;
+    overflow: hidden;
+  }
+
+  header .container {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  header .container .nav-toggle {
+    display: block;
+    position: absolute;
+    right: 22px;
+    top: 25px;
+    font-size: 30px;
+    border: none;
+    background: transparent;
+    color: white;
+  }
+
+  header .container h2 {
+    margin-top: 23px;
+  }
+
+  header .holder {
+    width: 100%;
+    padding-bottom: 23px;
+    border-bottom: 1px solid white;
+  }
+
+  header .container .links li {
+    width: 100%;
+  }
+
+  header .container .links li a {
+    padding: 0;
+    font-weight: 600;
+    height: 42px;
+    font-size: 17px;
+    justify-content: flex-start;
+  }
+
+  header .container .links .active-l {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    font-size: 18px;
+  }
+
+  header .container .forwade-btn {
+    display: block !important;
+    background-color: transparent;
+    border: none;
+    color: white;
+  }
+}
+
+.show-links {
+  height: 330px !important;
+  padding: 7px;
+}
+
+
+
+
+header .container .mega-menu {
+  position: absolute;
+    width: 400px;
+    right: 0;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    top: calc(100% + 50px);
+    opacity: 0;
+    z-index: -1;
+    transition: top var(--main-duration), opacity var(--main-duration);
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+    padding: 10px 20px;
+    gap: 45px;
+}
+
+header .container .forwade-btn {
+  display: none;
+}
+
+
+header .container .links .mega-menu .link li a {
+  color: black;
+}
+
+
+@media (max-width: 991px) {
+  header .container .mega-menu {
+    position: absolute;
+width: 400px;
+right: 0;
+background-color: white;
+display: flex;
+justify-content: center;
+align-items: center;
+/* top: calc(100% + 50px); */
+opacity: 0 ;
+top: 26%;
+z-index: -1;
+transition: top var(--main-duration), opacity var(--main-duration);
+border-bottom-left-radius: 7px;
+border-bottom-right-radius: 7px;
+gap: 45px;
+/* transform: translateX(-100%) !important; */
+height: 311px;
+transition: 0.5s;
+top: 63%;
+left: 50%;
+transform: translate(-50%, -50%) !important;
+width: 100vw;
+height: 311px;
+padding: 55px 0 20px;
+  }
+}
+
+
+.show-mega {
+  /* transform: translateX(10%) !important; */
+  z-index: 1 !important;
+  opacity: 1 !important;
+}
+
+
+
+
+header .container .mega-menu img {
+  width: 33px;
+}
+
+
+header .container .mega-menu .remove-btn {
+  position: absolute;
+  top: 7px;
+  right: 12px;
+  border: none;
+  color: red;
+  background: transparent;
+  font-size: 30px;
+}
