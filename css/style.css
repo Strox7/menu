@@ -79,7 +79,7 @@ header {
     background-color: var(--maincolor);
 }
 
-header img {
+header .container .holder img {
     width: 66px;
     border-right: 1px solid white;
     padding-right: 10px;
@@ -211,7 +211,7 @@ header .container .nav-toggle {
 
 
 
-header .container .mega-menu {
+/* header .container .mega-menu {
   position: absolute;
     width: 400px;
     right: 0;
@@ -226,7 +226,7 @@ header .container .mega-menu {
     border-bottom-right-radius: 7px;
     padding: 10px 20px;
     gap: 45px;
-}
+} */
 
 header .container .forwade-btn {
   display: none;
@@ -241,37 +241,36 @@ header .container .links .mega-menu .link li a {
 @media (max-width: 991px) {
   header .container .mega-menu {
     position: absolute;
-width: 400px;
-right: 0;
-background-color: white;
-display: flex;
-justify-content: center;
-align-items: center;
-/* top: calc(100% + 50px); */
-opacity: 0 ;
-top: 26%;
-z-index: -1;
-transition: top var(--main-duration), opacity var(--main-duration);
-border-bottom-left-radius: 7px;
-border-bottom-right-radius: 7px;
-gap: 45px;
-/* transform: translateX(-100%) !important; */
-height: 311px;
-transition: 0.5s;
-top: 63%;
-left: 50%;
-transform: translate(-50%, -50%) !important;
-width: 100vw;
-height: 311px;
-padding: 55px 0 20px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    z-index: -1;
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+    gap: 45px;
+    height: 311px;
+    transition: 0.5s;
+    top: 26%;
+    left: 50%;
+    transform: translateX(-155%);
+    width: 100vw;
+    height: 311px;
+    padding: 55px 0 20px;
+    top: 106px;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 100vw;
+    height: 311px;
   }
 }
 
 
 .show-mega {
-  /* transform: translateX(10%) !important; */
+  transform: translateX(-50%) !important;
   z-index: 1 !important;
-  opacity: 1 !important;
 }
 
 
@@ -279,6 +278,7 @@ padding: 55px 0 20px;
 
 header .container .mega-menu img {
   width: 33px;
+  padding-right: 10px;
 }
 
 
@@ -291,3 +291,8 @@ header .container .mega-menu .remove-btn {
   background: transparent;
   font-size: 30px;
 }
+
+
+/* .trans {
+  transform: translateX(-100%);
+} */
