@@ -10,11 +10,16 @@ const Forwade = document.querySelector(".forwade-btn")
 const MegaMenu = document.querySelector(".mega-menu")
 const Removetoggle = document.querySelector(".remove-btn")
 
+// MegaMenu.classList.add('trans')
 
 Forwade.addEventListener('click', function () {
     MegaMenu.classList.toggle('show-mega')
+
+
 })
 
+MegaMenu.style
+
 Removetoggle.addEventListener('click', function () {
-    MegaMenu.classList.toggle('show-mega')
+    MegaMenu.classList.remove('show-mega')
 })
