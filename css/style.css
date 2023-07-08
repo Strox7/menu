@@ -190,16 +190,31 @@ header .container .nav-toggle {
   header .container .links .active-l {
     display: flex;
     align-items: center;
-    justify-content: space-between;
     color: white;
     font-size: 18px;
   }
 
   header .container .forwade-btn {
     display: block !important;
-    background-color: transparent;
-    border: none;
-    color: white;
+    color: var(--maincolor);
+    background: transparent;
+    font-size: 17px;
+    border-color: var(--maincolor);
+    padding: 4px 5px;
+    background-color: white;
+    border: 1px solid var(--maincolor);
+    border-radius: 12%;
+    right: 0;
+    bottom: 0;
+    
+  }
+
+  header .container .forwade-btn i {
+    margin-right: 0 !important;
+  }
+
+  header .container .remove-btn i {
+    margin-right: 0 !important;
   }
 }
 
@@ -211,12 +226,12 @@ header .container .nav-toggle {
 
 
 
-/* header .container .mega-menu {
+header .container .mega-menu {
   position: absolute;
     width: 400px;
     right: 0;
     background-color: white;
-    display: flex;
+    display: none;
     justify-content: center;
     top: calc(100% + 50px);
     opacity: 0;
@@ -226,7 +241,7 @@ header .container .nav-toggle {
     border-bottom-right-radius: 7px;
     padding: 10px 20px;
     gap: 45px;
-} */
+}
 
 header .container .forwade-btn {
   display: none;
@@ -247,8 +262,8 @@ header .container .links .mega-menu .link li a {
     align-items: center;
     opacity: 1;
     z-index: -1;
-    border-bottom-left-radius: 7px;
-    border-bottom-right-radius: 7px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
     gap: 45px;
     height: 311px;
     transition: 0.5s;
@@ -265,6 +280,31 @@ header .container .links .mega-menu .link li a {
     width: 100vw;
     height: 311px;
   }
+  header .container .links .active-l {
+    padding: 0;
+    font-weight: 600;
+    height: 42px;
+    font-size: 17px;
+  }
+
+  header .container .mega-menu ul li {
+    border-bottom: 1px solid #ddd;
+  }
+  header .container .mega-menu ul li:last-of-type {
+    border-bottom: none;
+  }
+
+  header .container .links i {
+    margin-right: 10px;
+  }
+
+  header .container .links .lops {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    height: 100%;
+  } 
 }
 
 
@@ -272,7 +312,6 @@ header .container .links .mega-menu .link li a {
   transform: translateX(-50%) !important;
   z-index: 1 !important;
 }
-
 
 
 
@@ -284,12 +323,18 @@ header .container .mega-menu img {
 
 header .container .mega-menu .remove-btn {
   position: absolute;
-  top: 7px;
-  right: 12px;
-  border: none;
-  color: red;
+  top: 9px;
+  left: 12px;
+  /* border: none; */
+  color: white;
   background: transparent;
-  font-size: 30px;
+  font-size: 17px;
+  border-color: var(--maincolor);
+  padding: 4px 5px;
+  background-color: var(--maincolor);
+  border: 1px solid var(--maincolor);
+  border-radius: 12%;
+  margin-right: 0;
 }
 
 
